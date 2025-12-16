@@ -52,11 +52,11 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         fizzy: {
-          cyan: "hsl(var(--fizzy-cyan))",
-          "cyan-glow": "hsl(var(--fizzy-cyan-glow))",
-          amber: "hsl(var(--fizzy-amber))",
-          coral: "hsl(var(--fizzy-coral))",
-          bubble: "hsl(var(--fizzy-bubble))",
+          "deep-blue": "hsl(var(--fizzy-deep-blue))",
+          blue: "hsl(var(--fizzy-blue))",
+          "light-blue": "hsl(var(--fizzy-light-blue))",
+          orange: "hsl(var(--fizzy-orange))",
+          pink: "hsl(var(--fizzy-pink))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
