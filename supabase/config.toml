@@ -1,0 +1,4 @@
+project_id = "gheunvjuwsimzcqyeibi"
+
+[functions.physics-formula]
+verify_jwt = false
