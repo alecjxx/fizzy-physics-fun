@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 const interests = [
   { icon: Music, label: 'Music', color: 'text-accent' },
   { icon: Gamepad, label: 'Gaming', color: 'text-secondary' },
-  { icon: Palette, label: 'Art', color: 'text-fizzy-coral' },
+  { icon: Palette, label: 'Art', color: 'text-accent' },
   { icon: Dumbbell, label: 'Sports', color: 'text-primary' },
   { icon: Utensils, label: 'Cooking', color: 'text-secondary' },
 ];
@@ -18,37 +18,50 @@ const AISection = () => {
           <div className="flex justify-center lg:order-2">
             <div className="relative">
               {/* Robot Body */}
-              <div className="w-64 h-72 rounded-3xl bg-gradient-to-b from-primary/30 to-primary/10 border-2 border-primary/40 flex flex-col items-center justify-center animate-wobble glass-card">
+              <div className="w-64 h-72 rounded-3xl bg-gradient-to-b from-fizzy-deep-blue to-card border-2 border-primary/30 flex flex-col items-center justify-center glass-card">
+                {/* Antenna */}
+                <div className="absolute -top-10 left-1/2 -translate-x-1/2">
+                  <div className="w-2 h-14 bg-primary/60 rounded-full" />
+                  <div className="w-8 h-8 rounded-full bg-primary absolute -top-3 left-1/2 -translate-x-1/2 animate-glow-pulse" />
+                </div>
+                
                 {/* Robot Face */}
-                <div className="w-32 h-32 rounded-2xl bg-card border border-primary/30 flex items-center justify-center mb-4">
-                  <div className="flex gap-6">
-                    <div className="w-6 h-6 rounded-full bg-primary animate-pulse" />
-                    <div className="w-6 h-6 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.2s' }} />
+                <div className="w-36 h-28 rounded-2xl bg-card/80 border border-primary/20 flex flex-col items-center justify-center mb-4 gap-4">
+                  <div className="flex gap-8">
+                    <div className="w-8 h-8 rounded-full bg-primary animate-pulse-sphere" />
+                    <div className="w-8 h-8 rounded-full bg-primary animate-pulse-sphere" style={{ animationDelay: '0.3s' }} />
                   </div>
                 </div>
+                
                 {/* Mouth */}
-                <div className="w-16 h-3 rounded-full bg-secondary/60" />
-                {/* Antenna */}
-                <div className="absolute -top-8 left-1/2 -translate-x-1/2">
-                  <div className="w-2 h-12 bg-primary/40 rounded-full" />
-                  <div className="w-6 h-6 rounded-full bg-primary absolute -top-2 left-1/2 -translate-x-1/2 animate-pulse-glow" />
+                <div className="w-20 h-4 rounded-full bg-secondary/70" />
+                
+                {/* Body decoration */}
+                <div className="flex gap-3 mt-4">
+                  <div className="w-4 h-4 rounded-full bg-accent/60" />
+                  <div className="w-4 h-4 rounded-full bg-secondary/60" />
+                  <div className="w-4 h-4 rounded-full bg-primary/60" />
                 </div>
               </div>
-              {/* Floating Bubbles */}
-              <div className="absolute -top-4 -right-8 w-8 h-8 rounded-full bg-secondary/30 border border-secondary/50 animate-float" />
-              <div className="absolute bottom-8 -left-6 w-6 h-6 rounded-full bg-accent/30 border border-accent/50 animate-float" style={{ animationDelay: '1s' }} />
+              
+              {/* Floating Spheres */}
+              <div className="absolute -top-4 -right-10 w-10 h-10 rounded-full bg-secondary fizzy-glow-orange animate-float" />
+              <div className="absolute bottom-10 -left-8 w-8 h-8 rounded-full bg-accent fizzy-glow-pink animate-float" style={{ animationDelay: '1s' }} />
+              <div className="absolute top-1/3 -right-6 w-4 h-4 rounded-full bg-foreground animate-float" style={{ animationDelay: '0.5s' }} />
             </div>
           </div>
 
           {/* Content */}
           <div className="lg:order-1">
             <div className="flex items-center gap-3 mb-4">
-              <Bot className="w-8 h-8 text-primary" />
-              <span className="text-primary font-display font-semibold text-lg">Meet Fizzy AI</span>
+              <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                <Bot className="w-5 h-5 text-accent" />
+              </div>
+              <span className="text-accent font-display font-semibold text-lg">Meet Fizzy AI</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Physics through <span className="bubble-text">Your Eyes</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
+              Physics through <span className="gradient-text">Your Eyes</span>
             </h2>
             
             <p className="text-muted-foreground text-lg mb-8">
@@ -62,7 +75,7 @@ const AISection = () => {
                 {interests.map(({ icon: Icon, label, color }) => (
                   <button
                     key={label}
-                    className="group flex items-center gap-2 px-4 py-2 rounded-full bg-muted/30 border border-muted hover:border-primary/50 hover:bg-primary/10 transition-all"
+                    className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-muted/20 border border-border hover:border-primary/50 hover:bg-primary/10 transition-all"
                   >
                     <Icon className={`w-4 h-4 ${color}`} />
                     <span className="text-foreground group-hover:text-primary transition-colors">{label}</span>
@@ -71,7 +84,7 @@ const AISection = () => {
               </div>
             </div>
 
-            <Button variant="fizzy" size="lg" className="gap-2">
+            <Button variant="fizzyPink" size="lg" className="gap-2">
               <Bot className="w-5 h-5" />
               Start Learning with Fizzy
             </Button>

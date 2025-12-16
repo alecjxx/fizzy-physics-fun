@@ -1,4 +1,4 @@
-import Bubbles from '@/components/Bubbles';
+import GeometricBackground from '@/components/GeometricBackground';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AISection from '@/components/AISection';
@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <Bubbles />
+      <GeometricBackground />
       <Navbar />
       <main>
         <HeroSection />
